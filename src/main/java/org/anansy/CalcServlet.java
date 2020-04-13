@@ -42,8 +42,8 @@ public class CalcServlet extends javax.servlet.http.HttpServlet {
         String resultOperation = "+".equals(operation) ? "$" : operation;
 
         response.sendRedirect(String.format(
-                "/Lab3_Servelats_war_exploded/?first=%d&second=%d&operation=%s&result=%.6f",
-                first, second, resultOperation, result
+                "%s/?first=%d&second=%d&operation=%s&result=%.6f",
+                request.getContextPath(), first, second, resultOperation, result
                 )
         );
     }
